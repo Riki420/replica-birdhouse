@@ -6,3 +6,18 @@ body{
 .nav-link:hover{
     color: red;
 }
+
+
+/*Product Section*/
+
+.img-prd{
+    width: 62px;
+    height: 200px;
+}
+
+.card{
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    
+}

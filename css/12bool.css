@@ -70,6 +70,9 @@
     margin: 20px;
 }
 
+.m-1{
+    margin-top:10px;
+}
 
 .mt-2{
     margin-top: 20px
@@ -612,6 +615,10 @@ hr{
 .between-sm{
     justify-content: between;
 }
+
+
+
+
 
 /*OFF-SET*/
 
