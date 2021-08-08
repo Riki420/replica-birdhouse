@@ -21,3 +21,9 @@ body{
     text-align: center;
     
 }
+
+
+.position-fixed{
+    position: fixed;
+    background-color: #fff;
+}
