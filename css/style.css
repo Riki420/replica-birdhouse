@@ -3,8 +3,47 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
+
+/*NAVBAR*/
+.nav-item{
+    display: inline-block;
+}
+
+.nav-link{
+    font-size: 1.1em;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
 .nav-link:hover{
-    color: red;
+border-bottom: 1px solid #949494;
+}
+
+.cart-btn{
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+.cart-btn:hover{
+    border: 1px solid black;
+}
+
+.fa-shopping-cart{
+    color: #949494;
+    margin-right: 10px;
+}
+
+.fa-facebook-f:hover{
+    color: #0000AA;
+}
+.fa-youtube:hover{
+    color: #FF0000
+}
+.fa-instagram:hover{
+    color: purple;
 }
 
 
@@ -27,3 +66,5 @@ body{
     position: fixed;
     background-color: #fff;
 }
+
+

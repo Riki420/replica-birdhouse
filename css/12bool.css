@@ -78,6 +78,10 @@
     margin-top: 20px
 }
 
+.mt-8{
+    margin-top: 80px
+}
+
 .mc{
     margin: 0 auto;
 }
@@ -173,7 +177,7 @@ hr{
 }
 
 .justify-between{
-    justify-content: between;
+    justify-content: space-between;
 }
 
 .align-c-center{
@@ -195,6 +199,8 @@ hr{
 .align-c-around{
     align-content: space-around;
 }
+
+
 
 .img-100{
     width: 100%;

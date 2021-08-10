@@ -9,29 +9,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==' crossorigin='anonymous'/>
     <link rel="shortcut icon" href="http://cdn.shopify.com/s/files/1/1128/8094/t/4/assets/logo.png?v=9579296146624285645" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="./css/12bool.css">
     <link rel="stylesheet" href="./css/style.css">
+
     <title>Birdhouse Skate Shop</title>
 </head>
 <body>
     <!--HEADER-->
      <header class="position-fixed w-100">
       <div class="container">
-        <div class="row d-flex tr justify-center align-c-center">
+        <div class="row d-flex tr align-i-center">
           <div class="col-3 p-2">
             <img src="https://cdn.shopify.com/s/files/1/1128/8094/t/4/assets/logo.png?v=9579296146624285645" alt="Logo" class="img-100">
           </div>
           <div class="col-9 d-flex justify-end">
             <ul class="main-nav">
-              <li class="nav-link">Shop</li>
-              <li class="nav-link">Team</li>
-              <li class="nav-link">Catalog</li>
-              <li class="nav-link"><i class="fab fa-facebook-f"></i></li>
-              <li class="nav-link"><i class="fab fa-youtube"></i></li>
-              <li class="nav-link"><i class="fab fa-instagram"></i></li>
-              <li class="nav-link"><i class="fas fa-user"></i></li>
-              <li class="nav-link"><i class="fas fa-search"></i></li>
-              <button><i class="fas fa-shopping-cart"></i>CART</button>
+              <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Team</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Catalog</a></li>
+              <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a></li>
+              <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-youtube"></i></a></li>
+              <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-instagram"></i></a></li>
+              <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-user"></i></a></li>
+              <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-search"></i></a></li>
+              <button class="cart-btn"><i class="fas fa-shopping-cart"></i>CART</button>
 
 
             </ul>
@@ -47,13 +49,13 @@
     <div class="container">
        <div class="row">
          <div class="col-12">
-           <img src="https://cdn.shopify.com/s/files/1/1128/8094/t/4/assets/slideshow_1.jpg?v=15152424123952375923" alt="Jumbo" class="img-100">
+           <a href="#"><img src="https://cdn.shopify.com/s/files/1/1128/8094/t/4/assets/slideshow_1.jpg?v=15152424123952375923" alt="Jumbo" class="img-100"></a>
          </div>
         </div>
       <h2 class="mt-2">Completes</h2>
     </div>
 
-      <!--COMPLETE SKATEBOARDS-->
+      <!--COMPLETES SKATEBOARDS-->
         
       <div class="container">
         <div class="row">
@@ -101,11 +103,22 @@
           </div>
           
         </div>
+        <h2 class="mt-8">Decks</h2>
       </div>
 
-         
-         
-
+      <!--DECKS SKATEBOARDS-->   
+      <div class="container">
+        <div class="row" id="root">
+            <div class="col-4 card" v-for="deck in decksList">
+              <div class="col-12">{{deck.pic}}</div>
+              <div class="col-12">
+                <h5 class="mt-2 tl">{{deck.name}}</h5>
+                <h4 class="mt-1 tl">{{deck.price}}</h4>
+              </div>
+            </div>
+        </div>
+      </div>
+        
       
     </main>
 
@@ -115,7 +128,7 @@
     </footer>
 
 
-
     <script src="./js/script.js"></script>
+
 </body>
 </html>
