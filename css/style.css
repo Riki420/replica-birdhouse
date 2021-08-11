@@ -7,6 +7,7 @@ body{
 /*NAVBAR*/
 .nav-item{
     display: inline-block;
+    
 }
 
 .nav-link{
@@ -15,6 +16,7 @@ body{
     text-decoration: none;
     display: inline-block;
     padding: 10px;
+
 }
 
 .nav-link:hover{
@@ -28,7 +30,7 @@ border-bottom: 1px solid #949494;
     border: 1px solid #fff;
 }
 .cart-btn:hover{
-    border: 1px solid black;
+    transform: scale(1.1);
 }
 
 .fa-shopping-cart{

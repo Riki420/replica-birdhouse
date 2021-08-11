@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==' crossorigin='anonymous'/>
     <link rel="shortcut icon" href="http://cdn.shopify.com/s/files/1/1128/8094/t/4/assets/logo.png?v=9579296146624285645" />
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="./css/12bool.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -17,11 +18,11 @@
 </head>
 <body>
     <!--HEADER-->
-     <header class="position-fixed w-100">
+     <header class="position-fixed w-100 border-bottom">
       <div class="container">
         <div class="row d-flex tr align-i-center">
           <div class="col-3 p-2">
-            <img src="https://cdn.shopify.com/s/files/1/1128/8094/t/4/assets/logo.png?v=9579296146624285645" alt="Logo" class="img-100">
+            <a href="index.html"><img src="https://cdn.shopify.com/s/files/1/1128/8094/t/4/assets/logo.png?v=9579296146624285645" alt="Logo" class="img-100"></a>
           </div>
           <div class="col-9 d-flex justify-end">
             <ul class="main-nav">
@@ -52,73 +53,52 @@
            <a href="#"><img src="https://cdn.shopify.com/s/files/1/1128/8094/t/4/assets/slideshow_1.jpg?v=15152424123952375923" alt="Jumbo" class="img-100"></a>
          </div>
         </div>
-      <h2 class="mt-2">Completes</h2>
+      <h2 class="mt-8">Completes</h2>
     </div>
 
       <!--COMPLETES SKATEBOARDS-->
-        
-      <div class="container">
-        <div class="row">
-          <div class="col-4 card">
-            <div class="col-12"><img src="https://cdn.shopify.com/s/files/1/1128/8094/products/BIR_Complete_Holiday-_Flying_Falcon_large.jpg?v=1477609124" alt="Holiday-FlyingFalcon" class="img-prd"></div>
-            <div class="col-12">
-              <h5 class="mt-2 tl">Birdhouse Beginner Grade Complete Skateboard Flying Falcon 7.5"</h5>
-              <h4 class="mt-1 tl">$109.99</h4>
-            </div>
-          </div>
-          <div class="col-4 card">
-            <div class="col-12"><img src="https://cdn.shopify.com/s/files/1/1128/8094/products/BIR_Complete_Falcon_3_Blue_Main_large.jpg?v=1489179386" alt="Falcon3BlueMain" class="img-prd"></div>
-            <div class="col-12">
-              <h5 class="mt-2 tl">Birdhouse Beginner Grade Tony Hawk Complete Skateboard Falcon 3 7.75"</h5>
-              <h4 class="mt-1 tl">$119.99</h4>
-            </div>
-          </div>
-          <div class="col-4 card">
-            <div class="col-12"><img src="https://cdn.shopify.com/s/files/1/1128/8094/products/15-10-0036_LA_Favorites_PUR_Complete_7.75_large.png?v=1538693031" alt="LA-Favorites" class="img-prd"></div>
-            <div class="col-12">
-              <h5 class="mt-2 tl">Lizzie Armanto Purple Complete 7.75"</h5>
-              <h4 class="mt-1 tl">$119.99</h4>
-            </div>
-          </div>
-          <div class="col-4 card">
-            <div class="col-12"><img src="https://cdn.shopify.com/s/files/1/1128/8094/products/15-10-0038-TH_Full_Skull_Complete_7.5_large.png?v=1538695159" alt="TH-FullSkull" class="img-prd"></div>
-            <div class="col-12">
-              <h5 class="mt-2 tl">Tony Hawk Full Skull Complete 8"</h5>
-              <h4 class="mt-1 tl">$119.99</h4>
-            </div>
-          </div>
-          <div class="col-4 card">
-            <div class="col-12"><img src="https://cdn.shopify.com/s/files/1/1128/8094/products/15-10-0010-Triple-Stack-Black-8.0_large.png?v=1538700051" alt="TripleStack" class="img-prd"></div>
-            <div class="col-12">
-              <h5 class="mt-2 tl">Triple Stack Complete 8.0"</h5>
-              <h4 class="mt-1 tl">$119.99</h4>
-            </div>
-          </div>
-          <div class="col-4 card">
-            <div class="col-12"><img src="https://cdn.shopify.com/s/files/1/1128/8094/products/15-10-0029-bh-la-complete-favorites-green_large.png?v=1617141799" alt="LA-favorites" class="img-prd"></div>
-            <div class="col-12">
-              <h5 class="mt-2 tl">LA Favorites GREEN Complete 7.75</h5>
-              <h4 class="mt-1 tl">$119.99</h4>
-            </div>
-          </div>
-          
-        </div>
-        <h2 class="mt-8">Decks</h2>
-      </div>
-
-      <!--DECKS SKATEBOARDS-->   
-      <div class="container">
-        <div class="row" id="root">
-            <div class="col-4 card" v-for="deck in decksList">
-              <div class="col-12">{{deck.pic}}</div>
+    <div id="root">    
+        <div class="container mt-8">
+          <div class="row" id="onlyCompletes">
+            <div class="col-3 card" v-for="complete in completesList">
               <div class="col-12">
-                <h5 class="mt-2 tl">{{deck.name}}</h5>
-                <h4 class="mt-1 tl">{{deck.price}}</h4>
+                <img 
+                  :src="complete.pic"
+                  class="img-prd">
+              </div>
+              <div class="col-12">
+                <h5 class="mt-2 tl">{{complete.name}}</h5>
+                <h4 class="mt-1 tl">{{complete.price}}</h4>
               </div>
             </div>
+          </div>
+          <h2 class="mt-8">Decks</h2>
         </div>
-      </div>
-        
+
+        <!--DECKS SKATEBOARDS-->   
+        <div class="container mt-8">
+          <div class="row" id="onlyDeck">
+              <div class="col-3 card" 
+              v-for="deck in decksList">
+                <div class="col-12">
+                  <img 
+                    :src="deck.pic" 
+                    class="img-100">
+                </div>
+                <div class="col-12">
+                  <h5 class="mt-2 tl">{{deck.name}}</h5>
+                  <h4 class="mt-1 tl">{{deck.price}}</h4>
+                </div>
+              </div>
+              <div class="col-3 bg-c-grey txt-white flex-grow br-5 opacity2 align-i-center justify-center flex-col">
+                  <p><i class="fas fa-arrow-right tc txt-big"></i></p>
+                  <h2 class="txt-white txt-big mt-2 tc">SEE OTHER DECKS</h2>
+                
+
+              </div>
+          </div>
+        </div>
+    </div>    
       
     </main>
 
