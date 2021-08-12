@@ -60,7 +60,7 @@
     <div id="root">    
         <div class="container mt-8">
           <div class="row" id="onlyCompletes">
-            <div class="col-3 card" v-for="complete in completesList">
+            <div class="col-4 card" v-for="complete in completesList">
               <div class="col-12">
                 <img 
                   :src="complete.pic"
@@ -90,12 +90,10 @@
                   <h4 class="mt-1 tl">{{deck.price}}</h4>
                 </div>
               </div>
-              <div class="col-3 bg-c-grey txt-white flex-grow br-5 opacity2 align-i-center justify-center flex-col">
-                  <p><i class="fas fa-arrow-right tc txt-big"></i></p>
-                  <h2 class="txt-white txt-big mt-2 tc">SEE OTHER DECKS</h2>
-                
-
-              </div>
+                <div class="col-3 bg-c-grey txt-white flex-grow br-5 opacity2 align-i-center justify-center flex-col">
+                    <p><i class="fas fa-arrow-right tc txt-big"></i></p>
+                    <h2 class="txt-white txt-big mt-2 tc">SEE OTHER DECKS</h2>
+              </a>
           </div>
         </div>
     </div>    
@@ -103,8 +101,16 @@
     </main>
 
     <!--FOOTER-->
-    <footer class="mt-2">
-
+    <footer class="mt-8">
+      <div class="container-fluid mt-2">
+        <div class="row">
+          <div class="col-6 tc border-right border-top"> raspisha
+            
+          </div>
+          <div class="col-6 tc border-top"> rsasp</div>
+          <div class="col tc bg-c-grey"> &copy; BirdhouseSkateboarding</div>
+        </div>
+      </div>
     </footer>
 
 
