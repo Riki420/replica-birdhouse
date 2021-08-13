@@ -18,7 +18,7 @@
 </head>
 <body>
     <!--HEADER-->
-     <header class="position-fixed w-100 border-bottom">
+     <header class="position-fixed w-100 border-bottom z-ind1">
       <div class="container">
         <div class="row d-flex tr align-i-center">
           <div class="col-3 p-2">
@@ -90,9 +90,12 @@
                   <h4 class="mt-1 tl">{{deck.price}}</h4>
                 </div>
               </div>
-                <div class="col-3 bg-c-grey txt-white flex-grow br-5 opacity2 align-i-center justify-center flex-col">
-                    <p><i class="fas fa-arrow-right tc txt-big"></i></p>
-                    <h2 class="txt-white txt-big mt-2 tc">SEE OTHER DECKS</h2>
+                <div class="col-3">
+                  <button type="button" id="otherDeck" class="bg-c-grey txt-white h-100 br-5 opacity2 align-i-center justify-center flex-col py-2">
+                      <p><i class="fas fa-arrow-right tc txt-big"></i></p>
+                      <h2 class="txt-white txt-big mt-2 tc">SEE OTHER DECKS</h2>
+                  </button>
+                    
               </a>
           </div>
         </div>
@@ -104,12 +107,56 @@
     <footer class="mt-8">
       <div class="container-fluid mt-2">
         <div class="row">
-          <div class="col-6 tc border-right border-top"> raspisha
-            
+          <div class="col border-top">
+            <div class="container">
+              <div class="row">
+                <div class="col-6 tc border-right py-2">
+                  <hr>
+                  <h3>Birdhouse Skateboarding</h3>
+                  <hr>
+
+                  <ul class="tl mt-2">
+                    <li><a href="°">Search</a></li>
+                    <li><a href="°">About Us</a></li>
+                    <li><a href="°">Contact</a></li>
+                    <li><a href="°">FAQ</a></li>
+                    <li><a href="°">Privacy Policy</a></li>
+                    
+
+                  </ul>
+                  <hr class="mt-2">
+                  <div class="d-flex justify-around mt-2">
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+
+                  </div>
+                  
+                </div>
+                <div class="col-6 tc py-2"> 
+                  <hr>
+                  <h3>News About Update</h3>
+                  <hr>
+                  <div class="tl mt-2">
+                    <p>Sign up to get the latest on sales, new releases and more …</p>
+                    <input type="email" name="email" id="e-mail" class="mt-6">
+                    <div class="flex-grow">
+                      <button class="btn img-100 mt-6"> Sign Up</button>
+
+                    </div>
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="col tc bg-c-grey p-2"> &copy; BirdhouseSkateboarding</div>
+
+              </div>
+            </div>
+            </div>
           </div>
-          <div class="col-6 tc border-top"> rsasp</div>
-          <div class="col tc bg-c-grey"> &copy; BirdhouseSkateboarding</div>
-        </div>
+          
       </div>
     </footer>
 
