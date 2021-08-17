@@ -774,6 +774,14 @@ hr{
     display: block;
 }
 
+.py-sm{
+    padding: 2;
+}
+
+.border-bottom-sm-none{
+    border-bottom: 0px;
+}
+
 /*OFF-SET*/
 
 .col-sm-offset-12{
