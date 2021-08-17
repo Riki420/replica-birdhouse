@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 /*Classic Container*/
 .container{
@@ -70,6 +73,12 @@
     font-size: 2em;
 }
 
+.br-100{
+    border-radius: 100%;
+}
+.my-3{
+    margin: 30px 0;
+}
 /*UL OL*/
 
 .list-style-none{

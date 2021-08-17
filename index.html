@@ -26,20 +26,9 @@
           </div>
           <div class="col-9 col-sm-12 py-sm-2 d-flex justify-end">
             <ul class="main-nav">
-              <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Team</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Catalog</a></li>
-              
-              <div class="d-none-sm">
-                <li class="nav-item d-none-sm"><a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a></li>
-              <li class="nav-item d-none-sm"><a href="#" class="nav-link"><i class="fab fa-youtube"></i></a></li>
-              <li class="nav-item d-none-sm"><a href="#" class="nav-link"><i class="fab fa-instagram"></i></a></li>
-              <li class="nav-item d-none-sm"><a href="#" class="nav-link"><i class="fas fa-user"></i></a></li>
-              <li class="nav-item d-none-sm"><a href="#" class="nav-link"><i class="fas fa-search"></i></a></li>
-              </div>
-              
-
-
+              <li class="nav-item"><a href="#decksTitle" class="nav-link">Decks</a></li>
+              <li class="nav-item"><a href="#completesTitle" class="nav-link">Completes Skateboards</a></li>
+              <li class="nav-item"><a href="#teamSection" class="nav-link">Team</a></li>
               <li class="nav-item d-none-sm"><button class="cart-btn"><i class="fas fa-shopping-cart"></i>CART</button></li>
               
 
@@ -60,7 +49,7 @@
            <a href="#"><img src="https://cdn.shopify.com/s/files/1/1128/8094/t/4/assets/slideshow_1.jpg?v=15152424123952375923" alt="Jumbo" class="img-100"></a>
          </div>
         </div>
-      <h2 class="mt-8">Completes</h2>
+      <h2 class="mt-8" id="completesTitle">Completes</h2>
     </div>
 
       <!--COMPLETES SKATEBOARDS-->
@@ -79,13 +68,15 @@
               </div>
             </div>
           </div>
-          <h2 class="mt-8">Decks</h2>
+
+<hr class="mt-4">
+          <h2 class="mt-8" id="decksTitle">Decks</h2>
         </div>
 
         <!--DECKS SKATEBOARDS-->   
         <div class="container mt-8">
           <div class="row" id="onlyDeck">
-              <div class="col-3 col-sm-12 card" 
+              <div class="col-3 col-sm-12 card mt-2" 
                   v-for="deck in decksList">
                 <div class="col">
                   <img 
@@ -98,7 +89,7 @@
                 </div>
               </div>
                 <div class="col-3 col-sm-12">
-                  <button type="button" id="otherDeck" class="bg-c-grey txt-white h-100 br-5 align-i-center justify-center flex-col py-2 btn-red-2 pointer" :click="seeDecks">
+                  <button type="button" id="otherDeck" class="bg-c-grey txt-white h-100 br-5 align-i-center justify-center flex-col py-2 btn-red-2 pointer">
                       <p><i class="fas fa-arrow-right tc txt-big"></i></p>
                       <h2 class="txt-white txt-big mt-2 tc">SEE OTHER DECKS</h2>
                   </button>
@@ -107,7 +98,25 @@
           </div>
         </div>
     </div>    
-      
+    <section id="teamSection">
+      <div class="container">
+<hr class="mt-4">
+
+        <div class="row">
+          <div class="col-12 mt-4">
+            <h1>Team</h1>
+          </div>
+
+          <div class="col-3 mt-4 py-2"
+          v-for="team in teamList">
+            <div class="col">
+              <a :href="team.pic"><img :src="team.pic" class="img-100 br-100"></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
     </main>
 
     <!--FOOTER-->
@@ -131,10 +140,10 @@
                   </ul>
                   <hr class="mt-2">
                   <div class="d-flex justify-around mt-2">
-                    <i class="fab fa-youtube"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube pointer"></i>
+                    <i class="fab fa-instagram pointer"></i>
+                    <i class="fab fa-facebook-f pointer"></i>
+                    <i class="fab fa-twitter pointer"></i>
 
                   </div>
                   
@@ -143,7 +152,7 @@
                   <hr>
                   <h3 class="py-2 fs-2 txt-red">News About Update</h3>
                   <hr>
-                  <div class="tl mt-2">
+                  <div class="tl mt-2 fs-2">
                     <p>Sign up to get the latest on sales, new releases and more …</p>
                     <input type="email" name="email" id="e-mail" class="mt-4 bar-src img-100 py-2" placeholder="Insert your email">
                     <div class="flex-grow">

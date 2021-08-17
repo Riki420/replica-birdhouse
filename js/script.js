@@ -97,6 +97,57 @@ const onlyDeck = new Vue ({
             }
             
         ]
+        
     },
-    methods: {}
+    methods: {
+       
+    }
+})
+
+
+
+
+//--------------------------------------------------------------------------------------//
+//                                                                                      //
+//                                         TEAM                                         //
+//                                                                                      //
+//--------------------------------------------------------------------------------------//
+
+
+const teamSection = new Vue ({
+    el: '#teamSection',
+    data: {
+            teamList: [
+            {
+            name: 'Tony Hawk',
+            pic:'https://cdn.shopify.com/s/files/1/1128/8094/files/TONY_HAWK_SQUARE.jpg?13713130580116827742'
+        },
+        {
+            name: 'Aaron Homoki',
+            pic:'https://cdn.shopify.com/s/files/1/1128/8094/files/AARON_HOMOKI_TEAM_SQUARE.jpg?14833368862589446963'
+        },
+        {
+            name: 'Ben Raybourn',
+            pic:'https://cdn.shopify.com/s/files/1/1128/8094/files/BEN_RAYBOURN_TEAM_SQUARE.jpg?16257660216669323072'
+        },
+        {
+            pic: 'https://cdn.shopify.com/s/files/1/1128/8094/files/CLINT_WALKER_TEAM_SQUARE.jpg?17632313048585677746'
+        },
+        {
+            pic: 'https://cdn.shopify.com/s/files/1/1128/8094/files/DAVID_LOY_SQUARE.jpg?9672033928588162704'
+        },
+        {
+            pic: 'https://cdn.shopify.com/s/files/1/1128/8094/files/LIZZY_ARMANTO_TEAM_SQUARE_dda5d064-e24f-451f-85b9-10dd881d5598_large.jpg?v=1473290449'
+        },
+        {
+            pic: 'https://cdn.shopify.com/s/files/1/1128/8094/files/CLIVE_DIXON_SQUARE?8624182090466570555'
+        },
+        {
+            pic:'https://cdn.shopify.com/s/files/1/1128/8094/files/SHAWN_HALE_SQUARE_1119ee5a-b349-4821-9317-ce2ea25bc9ec?17476185367590731856'
+        },
+        {
+            pic:'https://cdn.shopify.com/s/files/1/1128/8094/files/ELLIOT_SLOAN_SQUARE.jpg?11906405139316731422'
+        }
+    ]
+    }
 })
