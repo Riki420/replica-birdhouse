@@ -21,19 +21,19 @@
      <header class="position-fixed w-100 border-bottom z-ind1">
       <div class="container">
         <div class="row d-flex tr align-i-center">
-          <div class="col-3 p-2">
-            <a href="index.html"><img src="https://cdn.shopify.com/s/files/1/1128/8094/t/4/assets/logo.png?v=9579296146624285645" alt="Logo" class="img-100"></a>
+          <div class="col-3 p-2 d-none-sm">
+            <a href="index.html"><img src="https://cdn.shopify.com/s/files/1/1128/8094/t/4/assets/logo.png?v=9579296146624285645" alt="Logo" class="img-100 "></a>
           </div>
-          <div class="col-9 d-flex justify-end">
+          <div class="col-9 col-sm-12 d-flex justify-end">
             <ul class="main-nav">
               <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Team</a></li>
               <li class="nav-item"><a href="#" class="nav-link">Catalog</a></li>
-              <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a></li>
-              <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-youtube"></i></a></li>
-              <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-instagram"></i></a></li>
-              <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-user"></i></a></li>
-              <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-search"></i></a></li>
+              <li class="nav-item"><a href="#" class="nav-link"><i class="d-none-sm fab fa-facebook-f"></i></a></li>
+              <li class="nav-item"><a href="#" class="nav-link"><i class="d-none-sm fab fa-youtube"></i></a></li>
+              <li class="nav-item"><a href="#" class="nav-link"><i class="d-none-sm fab fa-instagram"></i></a></li>
+              <li class="nav-item"><a href="#" class="nav-link"><i class="d-none-sm fas fa-user"></i></a></li>
+              <li class="nav-item"><a href="#" class="nav-link"><i class="d-none-sm fas fa-search"></i></a></li>
               <button class="cart-btn"><i class="fas fa-shopping-cart"></i>CART</button>
 
 
@@ -60,7 +60,7 @@
     <div id="root">    
         <div class="container mt-8">
           <div class="row" id="onlyCompletes">
-            <div class="col-4 card" v-for="complete in completesList">
+            <div class="col-4 col-sm-12 card" v-for="complete in completesList">
               <div class="col-12">
                 <img 
                   :src="complete.pic"
@@ -78,20 +78,20 @@
         <!--DECKS SKATEBOARDS-->   
         <div class="container mt-8">
           <div class="row" id="onlyDeck">
-              <div class="col-3 card" 
-              v-for="deck in decksList">
-                <div class="col-12">
+              <div class="col-3 col-sm-12 card" 
+                  v-for="deck in decksList">
+                <div class="col">
                   <img 
                     :src="deck.pic" 
                     class="img-100">
                 </div>
-                <div class="col-12">
+                <div class="col">
                   <h5 class="mt-2 tl">{{deck.name}}</h5>
                   <h4 class="mt-1 tl">{{deck.price}}</h4>
                 </div>
               </div>
-                <div class="col-3">
-                  <button type="button" id="otherDeck" class="bg-c-grey txt-white h-100 br-5 opacity2 align-i-center justify-center flex-col py-2">
+                <div class="col-3 col-sm-12">
+                  <button type="button" id="otherDeck" class="bg-c-grey txt-white h-100 br-5 align-i-center justify-center flex-col py-2 btn-red-2 pointer" :click="seeDecks">
                       <p><i class="fas fa-arrow-right tc txt-big"></i></p>
                       <h2 class="txt-white txt-big mt-2 tc">SEE OTHER DECKS</h2>
                   </button>
@@ -106,23 +106,21 @@
     <!--FOOTER-->
     <footer class="mt-8">
       <div class="container-fluid mt-2">
-        <div class="row">
+        <div class="row  d-f-none-sm">
           <div class="col border-top">
             <div class="container">
               <div class="row">
-                <div class="col-6 tc border-right py-2">
+                <div class="col-6 col-sm-12 tc border-right py-2">
                   <hr>
-                  <h3>Birdhouse Skateboarding</h3>
+                  <h3 class="py-2 fs-2 txt-red">Birdhouse Skateboarding</h3>
                   <hr>
 
-                  <ul class="tl mt-2">
-                    <li><a href="°">Search</a></li>
-                    <li><a href="°">About Us</a></li>
-                    <li><a href="°">Contact</a></li>
-                    <li><a href="°">FAQ</a></li>
-                    <li><a href="°">Privacy Policy</a></li>
-                    
-
+                  <ul class="tl mt-2 list-style-none">
+                    <li><a href="#" class="link-none txt-red">About Us</a></li>
+                    <li><a href="#" class="link-none txt-red">Contact</a></li>
+                    <li><a href="#" class="link-none txt-red">Search</a></li>
+                    <li><a href="#" class="link-none txt-red">FAQ</a></li>
+                    <li><a href="#" class="link-none txt-red">Privacy Policy</a></li>
                   </ul>
                   <hr class="mt-2">
                   <div class="d-flex justify-around mt-2">
@@ -134,15 +132,15 @@
                   </div>
                   
                 </div>
-                <div class="col-6 tc py-2"> 
+                <div class="col-6 col-sm-12 tc py-2"> 
                   <hr>
-                  <h3>News About Update</h3>
+                  <h3 class="py-2 fs-2 txt-red">News About Update</h3>
                   <hr>
                   <div class="tl mt-2">
                     <p>Sign up to get the latest on sales, new releases and more …</p>
-                    <input type="email" name="email" id="e-mail" class="mt-6">
+                    <input type="email" name="email" id="e-mail" class="mt-4 bar-src img-100 py-2" placeholder="Insert your email">
                     <div class="flex-grow">
-                      <button class="btn img-100 mt-6"> Sign Up</button>
+                      <button class="btn img-100 mt-2 btn-height btn-red btn-r-1 pointer"> Sign Up</button>
 
                     </div>
                   </div> 

@@ -40,6 +40,13 @@
 
 /*TEXT STYLE*/
 
+.fs-2{
+    font-size: 1.2em;
+}
+.fs-4{
+    font-size: 1.4em;
+}
+
 .tc{
     text-align: center;
 }
@@ -55,9 +62,22 @@
 .txt-white{
     color: white;
 }
+.txt-red{
+    color: rgb(100, 7, 7);
+}
 
 .txt-big{
     font-size: 2em;
+}
+
+/*UL OL*/
+
+.list-style-none{
+    list-style: none;
+}
+
+.link-none{
+    text-decoration: none;
 }
 
 /*BG-COLOR*/
@@ -121,6 +141,49 @@
 .z-ind1{
     z-index: 1;
 }
+.pointer{
+    cursor: pointer;
+}
+/*Button*/
+.btn-height{
+    height: 50px;
+}
+.btn-red{
+    background: rgb(36,0,0);
+    border: 0;
+    background: linear-gradient(4deg, rgba(36,0,0,1) 0%, rgba(121,9,9,1) 35%, rgba(255,0,0,1) 100%);
+    color: white;
+    font-size: 1.2em;
+}
+.btn-red:hover{
+    background: rgb(36,0,0);
+    border: 0;
+    background: linear-gradient(4deg, rgba(36,0,0,1) 0%, rgb(100, 7, 7) 35%, rgb(155, 3, 3) 100%);
+    color: white;
+    font-size: 1.2em;
+}
+
+.btn-red-2{
+    border: 0;
+    background: rgb(96,16,16);
+    background: linear-gradient(18deg, rgba(96,16,16,1) 0%, rgba(255,0,0,1) 100%); 
+
+}
+
+
+.btn-red-2:hover{
+    border: 0;
+    background: rgb(96,16,16);
+    background: linear-gradient(18deg, rgba(96,16,16,1) 0, rgb(187, 0, 0) 100%);
+
+}
+.btn-r-1{
+    border-radius: 10px;
+}
+/*FORM*/
+.bar-src{
+    height: 40px;
+}
 
 /*Margin*/
 .m-2{
@@ -133,6 +196,10 @@
 
 .mt-2{
     margin-top: 20px
+}
+
+.mt-4{
+    margin-top: 40px;
 }
 
 .mt-6{
@@ -700,8 +767,12 @@ hr{
 }
 
 
-
-
+.d-none-sm{
+    display: none;
+}
+.d-f-none-sm{
+    display: block;
+}
 
 /*OFF-SET*/
 
